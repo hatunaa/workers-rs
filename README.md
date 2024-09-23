@@ -8,7 +8,7 @@ Read the [Notes and FAQ](#notes-and-faq)
 
 ## Example Usage
 
-tunadv3
+tunadv1
 
 ```rust
 use worker::*;
