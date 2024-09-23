@@ -14,12 +14,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      
       - name: Extract version
         id: extract_version
         run: |
           BRANCH="${{ github.event.pull_request.head.ref }}"
           VERSION=${BRANCH:10}
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
